@@ -391,10 +391,12 @@ img {
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
+  transition: transform 0.3s ease;
 }
 
 .home__social-icon:hover {
   color: var(--first-color);
+  transform: scale(1.2);
 }
 
 .home__img {
@@ -492,6 +494,7 @@ img {
   height: .25rem;
   border-radius: .5rem;
   z-index: var(--z-back);
+  transition: width 1s ease;
 }
 
 .skills__html {
@@ -578,12 +581,13 @@ img {
 .footer__icon {
   font-size: 1.5rem;
   color: #fff;
-
+  transition: transform 0.3s ease;
   margin: 0 var(--mb-2);
 }
 
 .footer__icon:hover {
   transform: translateY(-3px);
+  transform: scale(1.2); 
 }
 
 .skills__img-container {
