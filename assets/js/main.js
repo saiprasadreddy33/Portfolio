@@ -8,6 +8,96 @@ const showMenu = (toggleId, navId) =>{
         })
     }
 }
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to animate skill bars
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skills__bar');
+    
+    skillBars.forEach((bar) => {
+        const skillLevel = bar.getAttribute('data-skill-level');
+        bar.style.width = `${skillLevel}%`;
+        bar.nextElementSibling.querySelector('.skills__percentage').textContent = `${skillLevel}%`;
+    });
+}
+
+// Attach scroll event listener
+document.addEventListener('scroll', () => {
+    const skillsSection = document.getElementById('skills');
+
+    if (isInViewport(skillsSection)) {
+        animateSkillBars();
+    }
+});
+
+// Initial check for skill bars on page load
+animateSkillBars();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dynamicTitle = document.getElementById("dynamicTitle");
+    const titles = ["Software Engineer", "Front End Developer", "Cricketer"];
+    let index = 0;
+    let charIndex = 0;
+
+    function updateTitle() {
+        dynamicTitle.innerHTML = `Hi,<br>I'am <span class="home__title-color">Prasad Reddy</span><br> ${titles[index].substring(0, charIndex)}<span id="cursor"></span>`;
+    }
+
+    function typeTitle() {
+        if (charIndex < titles[index].length) {
+            charIndex++;
+            updateTitle();
+            setTimeout(typeTitle, 100); // Adjust typing speed if needed
+        } else {
+            setTimeout(eraseTitle, 1000); // Wait for a second before erasing
+        }
+    }
+
+    function eraseTitle() {
+        if (charIndex > 0) {
+            charIndex--;
+            updateTitle();
+            setTimeout(eraseTitle, 50); // Adjust erasing speed if needed
+        } else {
+            index = (index + 1) % titles.length;
+            setTimeout(typeTitle, 500); // Wait for half a second before typing the next title
+        }
+    }
+
+    function startTypingEffect() {
+        const homeSection = document.getElementById("home");
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeTitle();
+                    observer.unobserve(entry.target); // Stop observing once the element is in view
+                }
+            });
+        }, options);
+
+        observer.observe(homeSection);
+    }
+
+    startTypingEffect();
+});
+
+
+
 showMenu('nav-toggle','nav-menu')
 
 const tabs = document.querySelectorAll('[data-target]'),
