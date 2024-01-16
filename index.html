@@ -9,6 +9,7 @@
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
     <title>Portfolio website</title>
@@ -51,27 +52,22 @@
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Prasad Reddy</span><br> Developer
+                <h1 class="home__title" id="dynamicTitle">Hi,<br>I'am <span class="home__title-color">Prasad Reddy</span><br> Software Engineer</h1>
+
                 </h1>
 
-                <a href="#" class="button">Contact</a>
+                <a href="#contact" class="button">Contact</a>
 
             </div>
 
             <div class="home__social">
-                <a href="https://www.linkedin.com/in/madireddy-sai-prasad-reddy-b4b035176/" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/__watto_" class="home__social-icon"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://github.com/saiprasadreddy33" class="home__social-icon"><i
-                        class='bx bxl-github'></i></a>
-                <a href="https://www.hackerrank.com/prasadreddy_33" class="home__social-icon" target="_blank"><img
-                        src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg"
-                        alt="HackerRank" height="30" width="20" /></a>
-                <a href="https://leetcode.com/prasad33/" class="home__social-icon" target="_blank"><img
-                        src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg"
-                        alt="LeetCode" height="30" width="20" /></a>
+                <a href="https://www.linkedin.com/in/madireddy-sai-prasad-reddy-b4b035176/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/__watto_" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/saiprasadreddy33" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                <a href="https://www.hackerrank.com/prasadreddy_33" class="home__social-icon" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="HackerRank" height="30" width="20" /></a>
+                <a href="https://leetcode.com/prasad33/" class="home__social-icon" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="LeetCode" height="30" width="20" /></a>
             </div>
+            
 
 
             <div class="home__img">
@@ -132,28 +128,27 @@
                         problem-solving, I embark on the journey of transforming concepts into elegant, user-centric
                         designs. My commitment to innovation and continuous learning propels me to stay abreast of the
                         ever-evolving landscape of web technologies.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html" data-skill-level="95"></div>
+                            <div>
+                                <span class="skills__percentage">0%</span>
+                            </div>
                         </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
+                        
                     <div class="skills__data">
                         <div class="skills__names">
                             <i class='bx bxl-css3 skills__icon'></i>
                             <span class="skills__name">CSS3</span>
                         </div>
-                        <div class="skills__bar skills__css">
+                        <div class="skills__bar skills__css" data-skill-level="85">
 
                         </div>
                         <div>
-                            <span class="skills__percentage">85%</span>
+                            <span class="skills__percentage">0</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -161,11 +156,11 @@
                             <i class='bx bxl-javascript skills__icon'></i>
                             <span class="skills__name">JAVASCRIPT</span>
                         </div>
-                        <div class="skills__bar skills__js">
+                        <div class="skills__bar skills__js"  data-skill-level="80">
 
                         </div>
                         <div>
-                            <span class="skills__percentage">80%</span>
+                            <span class="skills__percentage">0</span>
                         </div>
                     </div>
                 </div>
@@ -202,7 +197,7 @@
 
                     <div class="qualification__button button--flex" data-target="#work">
                         <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
+                        Experience
                     </div>
                 </div>
                 <div class="qualification__sections">
@@ -532,9 +527,9 @@
     <footer class="footer">
         <p class="footer__title">Prasad Reddy</p>
         <div class="footer__social">
-            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/__watto_" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="footer__icon animate__animated animate__scale-up"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/__watto_" class="footer__icon animate__animated animate__scale-up"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon animate__animated animate__scale-up"><i class='bx bxl-twitter'></i></a>
         </div>
         <p class="footer__copy">&#169; Sai Prasad Reddy.2024 All rights reserved.</p>
     </footer>
