@@ -52,7 +52,7 @@ animateSkillBars();
 
 document.addEventListener("DOMContentLoaded", function () {
     const dynamicTitle = document.getElementById("dynamicTitle");
-    const titles = ["Software Engineer", "Front End Developer", "Cricketer", "Gamer-PC,Mobile,Console"];
+    const titles = ["Software Engineer", "Front End Developer", "Cricketer", "Gamer"];
     let index = 0;
     let charIndex = 0;
 
