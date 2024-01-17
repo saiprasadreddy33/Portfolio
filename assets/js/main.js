@@ -8,6 +8,14 @@ const showMenu = (toggleId, navId) =>{
         })
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    // Simulate loading completion after a delay
+    setTimeout(function () {
+        document.querySelector('.loading-screen').style.top = 'calc(-100%)';
+        // Show the navigation bar after the loading is complete
+        document.querySelector('.nav').style.display = 'flex';
+        }, 5000); // Adjust the delay as needed
+});
 // Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -44,7 +52,7 @@ animateSkillBars();
 
 document.addEventListener("DOMContentLoaded", function () {
     const dynamicTitle = document.getElementById("dynamicTitle");
-    const titles = ["Software Engineer", "Front End Developer", "Freelance Developer","Cricketer"];
+    const titles = ["Software Engineer", "Front End Developer", "Cricketer", "Gamer-PC,Mobile,Console"];
     let index = 0;
     let charIndex = 0;
 
@@ -56,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (charIndex < titles[index].length) {
             charIndex++;
             updateTitle();
-            setTimeout(typeTitle, 100); // Adjust typing speed if needed
+            setTimeout(typeTitle, 100); 
         } else {
-            setTimeout(eraseTitle, 1000); // Wait for a second before erasing
+            setTimeout(eraseTitle, 1000); 
         }
     }
 
@@ -66,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (charIndex > 0) {
             charIndex--;
             updateTitle();
-            setTimeout(eraseTitle, 50); // Adjust erasing speed if needed
+            setTimeout(eraseTitle, 50); 
         } else {
             index = (index + 1) % titles.length;
             setTimeout(typeTitle, 500); // Wait for half a second before typing the next title
