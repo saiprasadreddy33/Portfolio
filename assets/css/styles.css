@@ -58,6 +58,32 @@
   margin-left: 4px;
   animation: dotBlink 0.4s infinite alternate;
 }
+.view-count {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.view-count__card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-count__card p {
+  margin: 0;
+}
+
+.view-count__card p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.view-count__card p:last-child {
+  font-size: 14px;
+}
 
 @keyframes fadeInOut {
   0%, 100% {
