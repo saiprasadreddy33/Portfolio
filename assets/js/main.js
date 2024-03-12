@@ -8,6 +8,45 @@ const showMenu = (toggleId, navId) =>{
         })
     }
 }
+// Function to update and display the view count
+function updateViewCount() {
+    let viewCount = localStorage.getItem('viewCount');
+    if (!viewCount) {
+        viewCount = 0;
+    } else {
+        viewCount = parseInt(viewCount);
+    }
+
+    // Update the view count on the webpage
+    const viewCountElement = document.getElementById('viewCount');
+    viewCountElement.textContent = viewCount.toLocaleString();
+
+    // Increment the view count and save it to localStorage
+    localStorage.setItem('viewCount', viewCount + 1);
+}
+
+// Function to show the view count card when scrolled to the bottom
+function showViewCount() {
+    const viewCountCard = document.querySelector('.view-count');
+    const footer = document.querySelector('footer');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+
+    // Check if the user has scrolled down to the footer
+    if (scrollTop + clientHeight >= footer.offsetTop) {
+        viewCountCard.style.display = 'block';
+    } else {
+        viewCountCard.style.display = 'none';
+    }
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', showViewCount);
+
+// Update the view count when the page is loaded
+document.addEventListener('DOMContentLoaded', updateViewCount);
+
 document.addEventListener("DOMContentLoaded", function () {
     // Simulate loading completion after a delay
     setTimeout(function () {
@@ -16,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.nav').style.display = 'flex';
         }, 5000); // Adjust the delay as needed
 });
+
 // Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
