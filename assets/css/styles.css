@@ -329,7 +329,7 @@ img {
 }
 
 .qualification__sections {
-  width: 48%;
+  width: auto;
   /* Adjust the width as needed */
 }
 
