@@ -19,7 +19,7 @@ This is a simple and elegant portfolio website template designed to showcase you
 ![image](https://github.com/saiprasadreddy33/Portfolio/assets/74254400/34f513ff-5e3c-4624-9f7a-3033db704bb7)
 
 
-**[Click here to view the portfolio](https://saiprasadreddy33.github.io/Portfolio/)**
+**[Click here to view the portfolio](https://prasadreddy.vercel.app/)**
 
 ### Credits:
 - **ScrollReveal.js**: Used for scroll animations.
